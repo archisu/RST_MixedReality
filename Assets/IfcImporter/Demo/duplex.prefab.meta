@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 523983205ce74b1639e3371c7abcc86f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162502
+  packageName: IFC importer
+  packageVersion: 1.51
+  assetPath: Assets/IfcImporter/Demo/duplex.prefab
+  uploadId: 566076

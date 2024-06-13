@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: fec843d9eb3020d8b9047103b765aada
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162502
+  packageName: IFC importer
+  packageVersion: 1.51
+  assetPath: Assets/IfcImporter/Scripts/IfcComponents/IfcUnits.cs
+  uploadId: 566076

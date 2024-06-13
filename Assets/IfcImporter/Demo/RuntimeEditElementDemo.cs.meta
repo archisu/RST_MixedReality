@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: f27bc1aba6febc602bba1fdfd7ea0c9d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162502
+  packageName: IFC importer
+  packageVersion: 1.51
+  assetPath: Assets/IfcImporter/Demo/RuntimeEditElementDemo.cs
+  uploadId: 566076

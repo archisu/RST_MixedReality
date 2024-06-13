@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9daaf93d269fdfb4993b885fd2122130
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162502
+  packageName: IFC importer
+  packageVersion: 1.51
+  assetPath: Assets/IfcImporter/Resources/RequiredMaterials/ifcTransparent.mat
+  uploadId: 566076

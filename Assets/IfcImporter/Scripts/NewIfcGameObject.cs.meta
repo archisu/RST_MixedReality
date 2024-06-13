@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 66411a33ba445ce4bad96c163e2dd5bf
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162502
+  packageName: IFC importer
+  packageVersion: 1.51
+  assetPath: Assets/IfcImporter/Scripts/NewIfcGameObject.cs
+  uploadId: 566076

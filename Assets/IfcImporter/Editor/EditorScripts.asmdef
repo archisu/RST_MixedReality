@@ -1,0 +1,9 @@
+﻿{
+	"name": "EditorScripts",
+    "references": [
+        "IfcImporter"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ]
+}

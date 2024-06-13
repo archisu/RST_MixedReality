@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 57eb33dee11942c4aadb1da2628e7bc6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162502
+  packageName: IFC importer
+  packageVersion: 1.51
+  assetPath: Assets/IfcImporter/Scripts/ReturnPropertyValue.cs
+  uploadId: 566076

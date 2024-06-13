@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e7ec7376bf828c168acbe179778b5d8e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162502
+  packageName: IFC importer
+  packageVersion: 1.51
+  assetPath: Assets/IfcImporter/Demo/demo_image_material.mat
+  uploadId: 566076

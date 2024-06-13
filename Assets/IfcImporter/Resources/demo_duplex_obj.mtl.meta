@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3de792dd5080bef48aa40a8bac186798
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162502
+  packageName: IFC importer
+  packageVersion: 1.51
+  assetPath: Assets/IfcImporter/Resources/demo_duplex_obj.mtl
+  uploadId: 566076

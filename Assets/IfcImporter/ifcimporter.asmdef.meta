@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 05e37887bd430e34e802a4dab0a7e965
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162502
+  packageName: IFC importer
+  packageVersion: 1.51
+  assetPath: Assets/IfcImporter/ifcimporter.asmdef
+  uploadId: 566076

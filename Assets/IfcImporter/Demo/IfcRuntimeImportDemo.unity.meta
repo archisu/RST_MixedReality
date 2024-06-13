@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 486fbc482a6471d77904c45920b5baff
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162502
+  packageName: IFC importer
+  packageVersion: 1.51
+  assetPath: Assets/IfcImporter/Demo/IfcRuntimeImportDemo.unity
+  uploadId: 566076

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9ccb7819278c6d946946cf812178ccd2
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162502
+  packageName: IFC importer
+  packageVersion: 1.51
+  assetPath: Assets/IfcImporter/Resources/RequiredMaterials/ifcOpaque.mat
+  uploadId: 566076

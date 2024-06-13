@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1a4aceff46488fd4e8b8c570396eb4e1
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162502
+  packageName: IFC importer
+  packageVersion: 1.51
+  assetPath: Assets/IfcImporter/Resources/demo_duplex_obj_log.txt
+  uploadId: 566076
