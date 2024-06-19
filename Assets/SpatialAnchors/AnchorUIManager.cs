@@ -39,6 +39,7 @@ public class AnchorUIManager : MonoBehaviour
 
     private List<OVRSpatialAnchor> _savedAnchors = new(); //saved anchors
     private List<OVRSpatialAnchor> _anchorInstances = new(); //active instances
+    private List<GameObject> _instantiatedAnchorPrefabs = new List<GameObject>(); //anchor prefabs
 
     private HashSet<Guid> _anchorUuids = new(); //simulated external location, like PlayerPrefs
     private Action<bool, OVRSpatialAnchor.UnboundAnchor> _onLocalized;
@@ -72,7 +73,7 @@ public class AnchorUIManager : MonoBehaviour
             var go = Instantiate(_nonSaveableAnchorPrefab, _nonSaveableTransform.position, _nonSaveableTransform.rotation); // Anchor b
             SetupAnchorAsync(go.AddComponent<OVRSpatialAnchor>(), saveAnchor: false);
         }
-        else if (OVRInput.GetDown(OVRInput.Button.One))
+        else if (OVRInput.GetDown(OVRInput.Button.One)) // a button
         {
             LoadAllAnchors();
         }
@@ -84,16 +85,19 @@ public class AnchorUIManager : MonoBehaviour
                 Destroy(anchor.gameObject);
             }
 
+            // Destroy all instantiated anchor prefabs
+            foreach (GameObject prefabInstance in _instantiatedAnchorPrefabs)
+            {
+                Destroy(prefabInstance);
+            }
+            _instantiatedAnchorPrefabs.Clear();
+
             // Clear the list of running anchors
             _anchorInstances.Clear();
         }
-        else if (OVRInput.GetDown(OVRInput.Button.Four))
+        else if (OVRInput.GetDown(OVRInput.Button.Four)) // y button
         {
             EraseAllAnchors();
-        }
-        else if (OVRInput.GetDown(OVRInput.Button.Two)) // y button to place prefab
-        {
-            PlacePrefabBasedOnAnchors();
         }
     }
 
@@ -146,13 +150,13 @@ public class AnchorUIManager : MonoBehaviour
             (anchor2 - anchor1).normalized
         );
 
-        // Calculate the offset from the object's centroid to the anchor's centroid
-        Vector3 positionOffset = anchorCentroid - objectCentroid;
-
         // Instantiate the prefab at the new position with the calculated rotation
         GameObject prefabInstance = Instantiate(_prefabToPlace, _prefabToPlace.transform.position, _prefabToPlace.transform.rotation);
-        prefabInstance.transform.position = objectCentroid + positionOffset;
+        prefabInstance.transform.position = anchorCentroid;
         prefabInstance.transform.rotation = rotation;
+
+        // Add the instantiated prefab to the list
+        _instantiatedAnchorPrefabs.Add(prefabInstance);
 
         // Clear anchor positions for the next set of anchors
         _anchorPositions.Clear();
@@ -206,7 +210,7 @@ public class AnchorUIManager : MonoBehaviour
             // Erase our reference lists
             _savedAnchors.Clear();
             _anchorUuids.Clear();
-            _anchorPositions.Clear(); // Clear anchor positions as well
+            _anchorPositions.Clear();
 
             Debug.Log($"Anchors erased.");
         }
