@@ -460,6 +460,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &205391453 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8753415436727935144, guid: 56052c626c7e52c46ad20618e53f0895,
+    type: 3}
+  m_PrefabInstance: {fileID: 1573799178}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &240663499
 GameObject:
   m_ObjectHideFlags: 0
@@ -1369,6 +1375,7 @@ GameObject:
   - component: {fileID: 856748611}
   - component: {fileID: 856748610}
   - component: {fileID: 856748612}
+  - component: {fileID: 856748613}
   m_Layer: 0
   m_Name: ScriptsManager
   m_TagString: Untagged
@@ -1420,10 +1427,32 @@ MonoBehaviour:
     type: 3}
   _refPreview: {fileID: 3197502563808036467, guid: e52cba62f6f48fd45989c14397b48ce3,
     type: 3}
-  _refTransform: {fileID: 1573799180}
+  _refTransform: {fileID: 205391453}
+  _PlPointPrefab: {fileID: 7577101601296614330, guid: 86c9c2f96c66b8245808dfb555219f81,
+    type: 3}
   _prefabToPlace: {fileID: 2863326928338951117, guid: ef0fd63d42290b44bb7659ee6ff2699d,
     type: 3}
   _prefabBasePoint: {fileID: 105503808}
+  _instantiatedRefPrefabs: []
+  _plaPositions: []
+--- !u!114 &856748613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856748609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce5b424ba95bc154d9b703f1ff30607e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefabToPlace: {fileID: 2863326928338951117, guid: ef0fd63d42290b44bb7659ee6ff2699d,
+    type: 3}
+  _RealPointsPrefab: {fileID: 7577101601296614330, guid: 99368c2f3c5f9f942977c06667373441,
+    type: 3}
+  _refTransform: {fileID: 205391453}
+  _realPositions: []
 --- !u!1 &1030200396
 GameObject:
   m_ObjectHideFlags: 0
@@ -2409,7 +2438,7 @@ PrefabInstance:
     - target: {fileID: 7571644917963910787, guid: 56052c626c7e52c46ad20618e53f0895,
         type: 3}
       propertyPath: m_Name
-      value: RightHandTransform
+      value: RightTransform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2704,11 +2733,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7571644917963910787, guid: e52cba62f6f48fd45989c14397b48ce3,
-        type: 3}
-      propertyPath: m_Name
-      value: LeftHandTransform
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2793,18 +2817,18 @@ PrefabInstance:
     - target: {fileID: 7114770128640495691, guid: d6733f35cecdc984c9d50925eb25939e,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7114770128640495691, guid: d6733f35cecdc984c9d50925eb25939e,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7114770128640495691, guid: d6733f35cecdc984c9d50925eb25939e,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 401652665}
+      objectReference: {fileID: 856748613}
     - target: {fileID: 7114770128640495691, guid: d6733f35cecdc984c9d50925eb25939e,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -2813,22 +2837,27 @@ PrefabInstance:
     - target: {fileID: 7114770128640495691, guid: d6733f35cecdc984c9d50925eb25939e,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleAnchorUIManagerScript
+      value: OnClick
       objectReference: {fileID: 0}
     - target: {fileID: 7114770128640495691, guid: d6733f35cecdc984c9d50925eb25939e,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: AnchorsToggle, Assembly-CSharp
+      value: ComponentPlacer, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7114770128640495691, guid: d6733f35cecdc984c9d50925eb25939e,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7114770128640495691, guid: d6733f35cecdc984c9d50925eb25939e,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7114770128640495692, guid: d6733f35cecdc984c9d50925eb25939e,
+        type: 3}
+      propertyPath: m_Name
+      value: PlaceComp
       objectReference: {fileID: 0}
     - target: {fileID: 7114770128640495695, guid: d6733f35cecdc984c9d50925eb25939e,
         type: 3}
@@ -3233,7 +3262,7 @@ PrefabInstance:
     - target: {fileID: 7114770129304473386, guid: d6733f35cecdc984c9d50925eb25939e,
         type: 3}
       propertyPath: m_text
-      value: Choose Component
+      value: Define Insertion Points
       objectReference: {fileID: 0}
     - target: {fileID: 7114770129304473387, guid: d6733f35cecdc984c9d50925eb25939e,
         type: 3}
@@ -3663,7 +3692,7 @@ PrefabInstance:
     - target: {fileID: 7114770130226374514, guid: d6733f35cecdc984c9d50925eb25939e,
         type: 3}
       propertyPath: m_Name
-      value: RefPrefab
+      value: SelPoints
       objectReference: {fileID: 0}
     - target: {fileID: 7114770130260611507, guid: d6733f35cecdc984c9d50925eb25939e,
         type: 3}
@@ -3823,7 +3852,7 @@ PrefabInstance:
     - target: {fileID: 7114770130504384575, guid: d6733f35cecdc984c9d50925eb25939e,
         type: 3}
       propertyPath: m_text
-      value: Enable/ Disable Anchors
+      value: Set Points IRL
       objectReference: {fileID: 0}
     - target: {fileID: 7114770130552418351, guid: d6733f35cecdc984c9d50925eb25939e,
         type: 3}

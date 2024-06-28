@@ -20,6 +20,9 @@ public class PointSelector : MonoBehaviour
     private Transform _refTransform;
 
     [SerializeField]
+    private GameObject _PlPointPrefab;
+
+    [SerializeField]
     private GameObject _prefabToPlace;
 
     [SerializeField]
@@ -28,16 +31,20 @@ public class PointSelector : MonoBehaviour
     private List<OVRSpatialAnchor> _refAnchors = new();
     private List<OVRSpatialAnchor> _refAnchorInstances = new(); //active instances
     private HashSet<Guid> _anchorUuids = new(); //simulated external location, like PlayerPrefs
-    private List<GameObject> _instantiatedRefPrefabs = new List<GameObject>(); //anchor prefabs
     private List<Vector3> _anchorPositions = new(); // Store anchor positions
 
+    public List<GameObject> _instantiatedRefPrefabs = new List<GameObject>(); //reference prefabs
+    
+    public List<Vector3> _plaPositions = new List<Vector3>(); //store placement positions
+
     private bool isPlacingPrefab = false;
+    private bool isPlacingPt = false;
 
     // Start is called before the first frame update
     void Start()
     {
         isPlacingPrefab = false;
-        //Instance = this;
+        Instance = this; 
     }
 
     // Update is called once per frame
@@ -50,39 +57,44 @@ public class PointSelector : MonoBehaviour
             SetupAnchorAsync(go.AddComponent<OVRSpatialAnchor>(), saveAnchor: true);
         }
 
-        //else if (OVRInput.GetDown(OVRInput.Button.Three)) // x button
-        //{
-        //    // Destroy all anchors from the scene, but don't erase them from storage
-        //    foreach (var anchor in _refAnchors)
-        //    {
-        //        Destroy(anchor.gameObject);
-        //    }
+        else if (isPlacingPrefab && OVRInput.GetDown(OVRInput.Button.Three)) // x button
+        {
+            // Destroy all anchors from the scene, but don't erase them from storage
+            foreach (var anchor in _refAnchors)
+            {
+                Destroy(anchor.gameObject);
+            }
 
-        //    // Destroy all instantiated anchor prefabs
-        //    foreach (GameObject prefabInstance in _instantiatedRefPrefabs)
-        //    {
-        //        Destroy(prefabInstance);
-        //    }
-        //    _instantiatedRefPrefabs.Clear();
+            // Destroy all instantiated anchor prefabs
+            foreach (GameObject prefabInstance in _instantiatedRefPrefabs)
+            {
+                Destroy(prefabInstance);
+            }
+            _instantiatedRefPrefabs.Clear();
 
-        //    // Clear the list of running anchors
-        //    _refAnchors.Clear();
-        //}
-
-        // Check for prefab placement activation via button click
+            // Clear the list of running anchors
+            _refAnchors.Clear();
+        }
 
         if (isPlacingPrefab && _anchorPositions.Count > 0)
         {
             PlaceRefPrefab();
             isPlacingPrefab = false; // Deactivate placement after one prefab is placed
+            isPlacingPt = true;
+        }
+
+        if (isPlacingPt && _plaPositions.Count > 2)
+        {
+            isPlacingPt = false;
+        }
+
+        if (isPlacingPt && OVRInput.GetDown(OVRInput.Button.One)) // A button
+        {
+            var go = Instantiate(_PlPointPrefab, _refTransform.position, _refTransform.rotation); // placement anchor
+            SetupPlaAsync(go.AddComponent<OVRSpatialAnchor>(), saveAnchor: true);
+
         }
     }
-
-    //public void ActivatePrefabPlacement()
-    //{
-
-    //    isPlacingPrefab = true;
-    //}
 
     private async void SetupAnchorAsync(OVRSpatialAnchor anchor, bool saveAnchor)
     {
@@ -100,10 +112,16 @@ public class PointSelector : MonoBehaviour
             _refAnchors.Add(anchor);
         }
 
-        if (_refAnchorInstances.Count == 1)
+    }
+
+    private async void SetupPlaAsync(OVRSpatialAnchor anchor, bool saveAnchor)
+    {
+        while (!anchor.Created && !anchor.Localized)
         {
-            PlaceRefPrefab();
+            await Task.Yield();
         }
+
+        _plaPositions.Add(anchor.transform.position);
 
     }
     private void PlaceRefPrefab()
@@ -129,7 +147,7 @@ public class PointSelector : MonoBehaviour
         // Clear anchor positions for the next set of anchors
         _anchorPositions.Clear();
 
-    }   
+    }
 
     public void OnClick()
     {
