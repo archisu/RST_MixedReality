@@ -219,4 +219,19 @@ public class AnchorUIManager : MonoBehaviour
             Debug.LogError($"Anchors NOT erased {result.Status}");
         }
     }
+
+    // Enable and disable fucntions for the button.
+
+    public void EnableDisable()
+    {
+        if (this.enabled == true) 
+        {
+            this.enabled = false;
+        }
+        else
+        {
+            this.enabled = true;
+        }
+        
+    }
 }
