@@ -23,6 +23,7 @@ public class ComponentPlacer : MonoBehaviour
     
 
     private bool isPlacingComp = false;
+
     public List<Vector3> _realPositions = new(); //store real life positions
     private List<Vector3> refPositions; //import referenced positions
     private List<GameObject> _instantiatedirlPrefabs = new List<GameObject>(); //irl prefabs list
@@ -45,17 +46,20 @@ public class ComponentPlacer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isPlacingComp && _realPositions.Count > 2)
-        {
-            PlaceirlPrefab();
-            isPlacingComp = false; // Deactivate placement after one prefab is placed
-        }
 
         if (isPlacingComp && OVRInput.GetDown(OVRInput.Button.Two))
         {
             var go = Instantiate(_RealPointsPrefab, _refTransform.position, _refTransform.rotation); // placement anchor
             SetupRealsAsync(go.AddComponent<OVRSpatialAnchor>(), saveAnchor: true);
         }
+
+        if (isPlacingComp && _realPositions.Count > 2)
+        {
+            PlaceirlPrefab();
+            isPlacingComp = false; // Deactivate placement after one prefab is placed
+        }
+
+        // not sure of the order of these if statements
 
     }
 
