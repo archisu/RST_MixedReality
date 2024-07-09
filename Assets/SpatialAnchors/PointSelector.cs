@@ -12,6 +12,9 @@ public class PointSelector : MonoBehaviour
 
     private GameObject _selectedComp;
 
+    // take the output from the comp menu controller here
+    // 
+
     [SerializeField]
     private GameObject _refAnchorPrefab;
 
@@ -139,6 +142,12 @@ public class PointSelector : MonoBehaviour
         Vector3 objectPoint1 = _prefabBasePoint.position;
 
         Vector3 offset = anchor1 - objectPoint1;
+
+        // add an if causal in here
+        // if selectedComp is sel1, spawn this prefab.. if 2 so on
+        // store this in a variable and send it to the comp placer
+        // points will be placed on the comp, and then on the real world so the comp will be spawned
+
 
         // Instantiate the prefab at the new position with the calculated rotation
         GameObject prefabInstance = Instantiate(_prefabToPlace, _prefabToPlace.transform.position + offset, _prefabToPlace.transform.rotation);
