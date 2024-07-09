@@ -10,6 +10,8 @@ public class PointSelector : MonoBehaviour
 {
     public static PointSelector Instance;
 
+    private GameObject _selectedComp;
+
     [SerializeField]
     private GameObject _refAnchorPrefab;
 
