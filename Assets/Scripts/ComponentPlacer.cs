@@ -26,7 +26,6 @@ public class ComponentPlacer : MonoBehaviour
 
     public List<Vector3> _realPositions = new(); //store real life positions
     private List<Vector3> refPositions; //import referenced positions
-    private List<GameObject> _instantiatedirlPrefabs = new List<GameObject>(); //irl prefabs list
     private GameObject _refPrefab;
 
 
@@ -38,8 +37,7 @@ public class ComponentPlacer : MonoBehaviour
         Instance = this;
         PointSelector pointSelector = PointSelector.Instance;
         List<Vector3> refPositions = pointSelector._plaPositions;
-        List<GameObject> refPrefabs = pointSelector._instantiatedRefPrefabs;
-        GameObject _refPrefab = refPrefabs[0];
+        GameObject _refPrefab = pointSelector._referencedPfab;
         
     }
 
@@ -53,7 +51,7 @@ public class ComponentPlacer : MonoBehaviour
             SetupRealsAsync(go.AddComponent<OVRSpatialAnchor>(), saveAnchor: true);
         }
 
-        if (isPlacingComp && _realPositions.Count > 2)
+        if (_realPositions.Count > 2)
         {
             PlaceirlPrefab();
             isPlacingComp = false; // Deactivate placement after one prefab is placed
@@ -101,8 +99,7 @@ public class ComponentPlacer : MonoBehaviour
         prefabInstance.transform.position = anchorCentroid;
         prefabInstance.transform.rotation = rotation;
 
-        // Add the instantiated prefab to the list
-        _instantiatedirlPrefabs.Add(prefabInstance);
+        // Add the instantiated prefab to the list, or find a way to track like ID
 
         // Clear anchor positions for the next set of anchors
         _realPositions.Clear();

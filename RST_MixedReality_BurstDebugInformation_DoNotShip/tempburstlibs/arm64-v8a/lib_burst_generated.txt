@@ -1,4 +1,4 @@
-Library: R:\Doa\Mixed Reality\RST_MixedReality\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
+Library: D:\Academic\Intern_RST\RST_MixedReality\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
 --platform=Android
 --backend=burst-llvm-16
 --target=ARMV8A_AARCH64
@@ -42,10 +42,11 @@ Library: R:\Doa\Mixed Reality\RST_MixedReality\Temp\BurstOutput\tempburstlibs\ar
 --assembly-defines=Unity.XR.Oculus;
 --assembly-defines=UnityEngine;
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=R:\Doa\Mixed Reality\RST_MixedReality\Temp\Burst
+--temp-folder=D:\Academic\Intern_RST\RST_MixedReality\Temp\Burst
+--debug=Full
 --key-folder=C:/Program Files/Unity/Hub/Editor/2022.3.26f1/Editor/Data/PlaybackEngines/AndroidPlayer
---decode-folder=R:\Doa\Mixed Reality\RST_MixedReality\Library\Burst
---output=R:\Doa\Mixed Reality\RST_MixedReality\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
+--decode-folder=D:\Academic\Intern_RST\RST_MixedReality\Library\Burst
+--output=D:\Academic\Intern_RST\RST_MixedReality\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=Unity.Jobs.IJobForExtensions+ForJobStruct`1[[UnityEngine.Rendering.Universal.ZBinningJob, Unity.RenderPipelines.Universal.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(UnityEngine.Rendering.Universal.ZBinningJob&, Unity.RenderPipelines.Universal.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--77fc393cb521ac129b1392d4eb94d29a
@@ -91,10 +92,11 @@ Library: R:\Doa\Mixed Reality\RST_MixedReality\Temp\BurstOutput\tempburstlibs\ar
 --assembly-defines=Unity.XR.Oculus;
 --assembly-defines=UnityEngine;
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=R:\Doa\Mixed Reality\RST_MixedReality\Temp\Burst
+--temp-folder=D:\Academic\Intern_RST\RST_MixedReality\Temp\Burst
+--debug=Full
 --key-folder=C:/Program Files/Unity/Hub/Editor/2022.3.26f1/Editor/Data/PlaybackEngines/AndroidPlayer
---decode-folder=R:\Doa\Mixed Reality\RST_MixedReality\Library\Burst
---output=R:\Doa\Mixed Reality\RST_MixedReality\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
+--decode-folder=D:\Academic\Intern_RST\RST_MixedReality\Library\Burst
+--output=D:\Academic\Intern_RST\RST_MixedReality\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=Unity.Burst.BurstCompiler+BurstCompilerHelper, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::IsBurstEnabled()--8c2be93e18276203cbd918daa2748a10

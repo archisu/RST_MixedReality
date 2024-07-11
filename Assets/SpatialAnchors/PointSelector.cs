@@ -38,7 +38,7 @@ public class PointSelector : MonoBehaviour
     private HashSet<Guid> _anchorUuids = new(); //simulated external location, like PlayerPrefs
     private List<Vector3> _anchorPositions = new(); // Store anchor positions
 
-    public List<GameObject> _instantiatedRefPrefabs = new List<GameObject>(); //reference prefabs
+    public GameObject _referencedPfab;  //reference prefabs
     
     public List<Vector3> _plaPositions = new List<Vector3>(); //store placement positions
 
@@ -71,11 +71,7 @@ public class PointSelector : MonoBehaviour
             }
 
             // Destroy all instantiated anchor prefabs
-            foreach (GameObject prefabInstance in _instantiatedRefPrefabs)
-            {
-                Destroy(prefabInstance);
-            }
-            _instantiatedRefPrefabs.Clear();
+            Destroy(_referencedPfab);
 
             // Clear the list of running anchors
             _refAnchors.Clear();
@@ -153,7 +149,7 @@ public class PointSelector : MonoBehaviour
         GameObject prefabInstance = Instantiate(_prefabToPlace, _prefabToPlace.transform.position + offset, _prefabToPlace.transform.rotation);
 
         // Add the instantiated prefab to the list
-        _instantiatedRefPrefabs.Add(prefabInstance);
+        _referencedPfab = prefabInstance.GetComponent<GameObject>();
 
         // Clear anchor positions for the next set of anchors
         _anchorPositions.Clear();
