@@ -62,7 +62,7 @@ public class PointSelector : MonoBehaviour
             SetupAnchorAsync(go.AddComponent<OVRSpatialAnchor>(), saveAnchor: true);
         }
 
-        else if (isPlacingPrefab && OVRInput.GetDown(OVRInput.Button.Three)) // x button
+        else if (OVRInput.GetDown(OVRInput.Button.Three)) // x button
         {
             // Destroy all anchors from the scene, but don't erase them from storage
             foreach (var anchor in _refAnchors)
@@ -77,7 +77,7 @@ public class PointSelector : MonoBehaviour
             _refAnchors.Clear();
         }
 
-        if (isPlacingPrefab && _anchorPositions.Count > 0)
+        if (isPlacingPrefab && _anchorPositions.Count == 1)
         {
             PlaceRefPrefab();
             isPlacingPrefab = false; // Deactivate placement after one prefab is placed
