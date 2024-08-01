@@ -55,7 +55,7 @@ public class PointSelector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isPlacingPrefab && OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger)) // Create a green capsule
+        if (isPlacingPrefab && OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger) && _anchorPositions.Count < 1) // Create a green capsule
         {
             // Create a reference anchor
             var go = Instantiate(_refAnchorPrefab, _refTransform.position, _refTransform.rotation); // Anchor A

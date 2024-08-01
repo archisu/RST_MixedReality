@@ -61,8 +61,9 @@ public class ComponentPlacer : MonoBehaviour
             }
         }
 
-        if (isPlacingComp && _realAnchors.Count == 3)
+        if (isPlacingComp && _realPositions.Count == 2)
         {
+            PlaceirlPrefab();
             isPlacingComp = false;
         }
 
@@ -81,11 +82,6 @@ public class ComponentPlacer : MonoBehaviour
 
         _realAnchors.Add(anchor);
         _realPositions.Add(anchor.transform.position);
-
-        if (_realPositions.Count == 3)
-        {
-            PlaceirlPrefab();
-        }
 
     }
 
@@ -117,13 +113,14 @@ public class ComponentPlacer : MonoBehaviour
 
         // Instantiate the prefab at the new position with the calculated rotation
         GameObject prefabInstance = Instantiate(_prefabToPlace, _prefabToPlace.transform.position, _prefabToPlace.transform.rotation);
-        prefabInstance.transform.position = objectCentroid;
+        prefabInstance.transform.position = anchorCentroid;
         prefabInstance.transform.rotation = rotation;
 
         // Add the instantiated prefab to the list, or find a way to track like ID
 
         // Clear anchor positions for the next set of anchors
         _realPositions.Clear();
+        isPlacingComp = false;
 
     }
 

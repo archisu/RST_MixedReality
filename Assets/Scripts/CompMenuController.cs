@@ -13,9 +13,6 @@ public class CompMenuController : MonoBehaviour
         selectedComp = button.GetComponentInChildren<Text>().text;
 
         Debug.Log("Selected Component:" + selectedComp);
-
-        //close the canvas 
-        flatCanvas.gameObject.SetActive(false);
     }
 }
 

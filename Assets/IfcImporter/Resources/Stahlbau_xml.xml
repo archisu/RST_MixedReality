@@ -21,9 +21,9 @@
 			<author>RSTDOM\t.steinhardt</author>
 			<organization>Structural Designer</organization>
 			<name>Stahlbau.ifc</name>
-			<time_stamp>2024-05-15T11:45:55</time_stamp>
-			<preprocessor_version>IFC Parser Version: 3.14.0</preprocessor_version>
-			<originating_system>Tekla Structures 2024 Service Pack 1, IFC Export Version: 4.0.0.0 Apr 11 2024</originating_system>
+			<time_stamp>2024-07-30T15:13:59+02:00</time_stamp>
+			<preprocessor_version>IfcOpenShell v0.7.0-6c9e130ca</preprocessor_version>
+			<originating_system>BlenderBIM 0.0.231104-4e76f36</originating_system>
 			<authorization/>
 		</file_name>
 		<file_schema>
