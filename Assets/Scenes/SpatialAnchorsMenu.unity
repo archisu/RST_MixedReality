@@ -14241,6 +14241,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -110.500595
       objectReference: {fileID: 0}
+    - target: {fileID: 1804112022006778132, guid: df64bf5efda75be4db0c812f9277d678,
+        type: 3}
+      propertyPath: m_text
+      value: 'IFC Model: XXX'
+      objectReference: {fileID: 0}
     - target: {fileID: 2463035047344834994, guid: df64bf5efda75be4db0c812f9277d678,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -14561,6 +14566,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -44
       objectReference: {fileID: 0}
+    - target: {fileID: 5952704009494501632, guid: df64bf5efda75be4db0c812f9277d678,
+        type: 3}
+      propertyPath: m_text
+      value: 'IFC Model: XXX'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6401302020658875337, guid: df64bf5efda75be4db0c812f9277d678,
+        type: 3}
+      propertyPath: m_text
+      value: 'IFC Model: XXX'
+      objectReference: {fileID: 0}
     - target: {fileID: 6495677687724174245, guid: df64bf5efda75be4db0c812f9277d678,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -14711,6 +14726,11 @@ PrefabInstance:
       propertyPath: m_VertexColorAlwaysGammaSpace
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7197167851350694339, guid: df64bf5efda75be4db0c812f9277d678,
+        type: 3}
+      propertyPath: m_text
+      value: 'IFC Model: XXX'
+      objectReference: {fileID: 0}
     - target: {fileID: 7973980165213920968, guid: df64bf5efda75be4db0c812f9277d678,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -14770,6 +14790,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -44
+      objectReference: {fileID: 0}
+    - target: {fileID: 8438148001841699822, guid: df64bf5efda75be4db0c812f9277d678,
+        type: 3}
+      propertyPath: m_text
+      value: 'IFC Model: XXX'
       objectReference: {fileID: 0}
     - target: {fileID: 8705040523801422731, guid: df64bf5efda75be4db0c812f9277d678,
         type: 3}
@@ -18054,12 +18079,12 @@ PrefabInstance:
     - target: {fileID: 7114770129336771049, guid: d6733f35cecdc984c9d50925eb25939e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.2
+      value: 0.169
       objectReference: {fileID: 0}
     - target: {fileID: 7114770129336771049, guid: d6733f35cecdc984c9d50925eb25939e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.716
+      value: 0.766
       objectReference: {fileID: 0}
     - target: {fileID: 7114770129336771049, guid: d6733f35cecdc984c9d50925eb25939e,
         type: 3}

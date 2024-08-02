@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RoomMesh.unity
     guid: cc9719422c8846f469718384b4306da2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ExpScene.unity
     guid: 6b4934dedf3ee534aa8829d05a5dda46
   - enabled: 0
